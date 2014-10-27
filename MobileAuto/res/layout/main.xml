@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#36454e"
+    android:orientation="vertical"
+    tools:context="com.dean.mobileauto.Main" >
+
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+    <ImageView
+        android:id="@+id/imageViewTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/video" />
+    
+    </RelativeLayout>
+
+    <!-- 方向盘 --> 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true"
+        >
+        
+    <ImageView
+        android:id="@+id/imageCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bk" />
+
+    <ImageButton
+        android:id="@+id/iBdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageCircle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:background="#00000000"
+        android:src="@drawable/down" />
+
+    <ImageButton
+        android:id="@+id/iBup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imageCircle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:background="#00000000"
+        android:src="@drawable/up" />
+
+    <ImageButton
+        android:id="@+id/iBleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/imageCircle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="17dp"
+        android:background="#00000000"
+        android:src="@drawable/left" />
+
+    <ImageButton
+        android:id="@+id/iBright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/imageCircle"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="17dp"
+        android:background="#00000000"
+        android:src="@drawable/right" />        
+          
+        
+    </RelativeLayout> 
+        
+        
+    </RelativeLayout>
+  
+   
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+            
+        <ImageButton
+            android:id="@+id/iBcom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            android:src="@drawable/camera" />
+
+        <ImageButton
+            android:id="@+id/iBclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:src="@drawable/send" />
+
+        <ImageButton
+            android:id="@+id/iBvoiceMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/iBclose"
+            android:background="#00000000"
+            android:src="@android:drawable/ic_btn_speak_now" />
+
+        <ListView
+            android:id="@+id/lvVoiceMain"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@+id/iBcom" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tvCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="TextView" />
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
